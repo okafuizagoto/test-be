@@ -1,0 +1,670 @@
+{
+	"info": {
+		"_postman_id": "2ade15e1-d3f0-4d31-9974-4e6e9b667fcd",
+		"name": "GoldGym",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18602321"
+	},
+	"item": [
+		{
+			"name": "Registration",
+			"item": [
+				{
+					"name": "getgoldgym",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=getgoldgym",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "getgoldgym"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertuser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_email\": \"test\",\r\n    \"gold_password\": \"testing\",\r\n    \"gold_nama\": \"testing\",\r\n    \"gold_nomorhp\": \"0852312521\",\r\n    \"gold_nomorkartu\": \"23582398\",\r\n    \"gold_cvv\": \"244\",\r\n    \"gold_expireddate\": \"20230928\",\r\n    \"gold_namapemegangkartu\": \"testing\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=insertuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "insertuser"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatevalidationemail",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updatevalidationemail&otp=495070&email=ignokafui@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "updatevalidationemail"
+								},
+								{
+									"key": "otp",
+									"value": "495070"
+								},
+								{
+									"key": "email",
+									"value": "ignokafui@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "golduserbyemail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=golduserbyemail&email=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "golduserbyemail"
+								},
+								{
+									"key": "email",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatepassword",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_password\": \"testing123\",\r\n    \"gold_id\": 4,\r\n    \"gold_email\": \"testingss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updatepassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "updatepassword"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "loginuser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_email\": \"test2\",\r\n    \"gold_password\": \"testing2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=loginuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "loginuser"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout(setting frontend untuk auto logout)",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_email\": \"test\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "logout"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Subscription",
+			"item": [
+				{
+					"name": "allsubscription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=allsubscription",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "allsubscription"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertsubsuser",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"header\": {\r\n        \"gold_email\": \"okafuiz@gmail.com\"\r\n    },\r\n    \"detail\": [\r\n        {\r\n            \"gold_menuid\": 1,\r\n            \"gold_statuslangganan\": \"testing\"\r\n        },\r\n        {\r\n            \"gold_menuid\": 2,\r\n            \"gold_statuslangganan\": \"testingzzzzz\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=insertsubsuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "insertsubsuser"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertsubsuserdetail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"gold_id\": 5,\r\n        \"gold_menuid\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=insertsubsuserdetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "insertsubsuserdetail"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletesubsuser",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_id\": 2,\r\n    \"gold_menuid\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=deletesubsuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "deletesubsuser"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatesubsuser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_jumlahpertemuan\": 13,\r\n    \"gold_id\": 1,\r\n    \"gold_menuid\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updatesubsuser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "updatesubsuser"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getuserandsubsdetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=getuserandsubsdetail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "getuserandsubsdetail"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateotpsubscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updateotpsubscription&email=okafuiz@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "updateotpsubscription"
+								},
+								{
+									"key": "email",
+									"value": "okafuiz@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Info management",
+			"item": [
+				{
+					"name": "updatenama",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_nama\": \"tester\",\r\n    \"gold_email\": \"testingss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updatenama",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "updatenama"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatekartu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gold_nomorkartu\": \"test\",\r\n    \"gold_cvv\": \"256\",\r\n    \"gold_email\": \"testingss\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updatekartu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "updatekartu"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "gettotalpayment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=gettotalpayment&email=okafuiz@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "gettotalpayment"
+								},
+								{
+									"key": "email",
+									"value": "okafuiz@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatepaymentsubscription",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updatepaymentsubscription&otp=805315&email=okafuiz@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4334",
+							"path": [
+								"gold-gym",
+								"v2",
+								"userdata"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "updatepaymentsubscription"
+								},
+								{
+									"key": "otp",
+									"value": "805315"
+								},
+								{
+									"key": "email",
+									"value": "okafuiz@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "updateotp",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4334/gold-gym/v2/userdata?type=updateotp&email=ignokafui@gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4334",
+					"path": [
+						"gold-gym",
+						"v2",
+						"userdata"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "updateotp"
+						},
+						{
+							"key": "email",
+							"value": "ignokafui@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

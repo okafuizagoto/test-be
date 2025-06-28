@@ -1,0 +1,20 @@
+server:
+  port: ":4334"
+database:
+  # master: "butuhdok_butuhdok:Zgamersz123@mysql+tcp(localhost:3306)/butuhdok_gold_gym_be"
+  master: "u868654674_goldadminz:3+Odv|aZj@tcp(srv1155.hstgr.io:3306)/u868654674_gold_gym_bez"
+  # firebase:
+  #   fcmProjectIDB2BPelapak: "gofirebase"
+api:
+  auth: "http://auth.staging/auth"
+swagger:
+  host: "localhost:8080"
+  schemes:
+    - http
+redis:
+  host: "localhost:6379"
+  password: ""
+firebase:
+  projectID: "gofirebase"
+  databaseURL: "https://gofirebase-default-rtdb.asia-southeast1.firebasedatabase.app/"
+  storageBucket: "gofirebase.appspot.com"  # optional but recommended if you use Firebase Storage

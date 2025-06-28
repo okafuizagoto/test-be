@@ -1,0 +1,10 @@
+server:
+  port: ":8080"
+database:
+api:
+  master: "u868654674_goldadmin:3+Odv|aZj@tcp(srv1155.hstgr.io:3306)/u868654674_gold_gym_be"
+  auth: "http://auth.staging/auth"
+swagger:
+  host: "staging.example.com"
+  schemes:
+    - https
